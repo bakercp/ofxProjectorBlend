@@ -122,7 +122,7 @@ void ofxProjectorBlend::moveDisplayVertical(unsigned int targetDisplay, int yOff
 {
     if (targetDisplay >= numProjectors)
     {
-        ofLogError() << "targetDisplay (" << targetDisplay << ") is invalid.";
+        ofLogError("ofxProjectorBlend::moveDisplayVertical") << "targetDisplay (" << targetDisplay << ") is invalid.";
         return;
     }
 

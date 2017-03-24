@@ -15,8 +15,11 @@ void ofApp::setup()
     std::cout << "canvas size: " << blender.getCanvasWidth() << " x " << blender.getCanvasHeight() << std::endl;
     std::cout << "display size: " << blender.getDisplayWidth() << " x " << blender.getDisplayHeight() << std::endl;
 
-    ofSetWindowShape(blender.getDisplayWidth(),
-                     blender.getDisplayHeight());
+//    ofSetWindowShape(blender.getDisplayWidth(),
+  //                   blender.getDisplayHeight());
+
+    //ofSetWindowPosition(-10, 0);
+
 }
 
 
@@ -93,4 +96,42 @@ void ofApp::keyReleased(int key)
     {
         blender.blendPower[0] += .05;
     }
+    else if (key == OF_KEY_UP)
+    {
+        float x = ofGetWindowPositionX();
+        float y = ofGetWindowPositionY() - 1;
+        std::cout << "up " << x << "/" << y << std::endl;
+        ofSetWindowPosition(int(x), int(y));
+    }
+    else if (key == OF_KEY_DOWN)
+    {
+        float x = ofGetWindowPositionX();
+        float y = ofGetWindowPositionY() + 1;
+        std::cout << "down " << x << "/" << y << std::endl;
+        ofSetWindowPosition(int(x), int(y));
+    }
+    else if (key == OF_KEY_LEFT)
+    {
+        float x = ofGetWindowPositionX() - 1;
+        float y = ofGetWindowPositionY();
+        std::cout << "left " << x << "/" << y << std::endl;
+        ofSetWindowPosition(int(x), int(y));
+    }
+    else if (key == OF_KEY_RIGHT)
+    {
+        std::cout << "right" << std::endl;
+        float x = ofGetWindowPositionX() + 1;
+        float y = ofGetWindowPositionY();
+        std::cout << "right " << x << "/" << y << std::endl;
+        ofSetWindowPosition(int(x), int(y));
+    }
+    else if (key == '[')
+    {
+
+    }
+    else if (key == ']')
+    {
+
+    }
+
 }

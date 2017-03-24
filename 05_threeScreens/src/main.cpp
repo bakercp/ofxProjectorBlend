@@ -10,11 +10,17 @@ int main()
 
     ofGLFWWindowSettings settings;
 
+    //settings.
+
     settings.multiMonitorFullScreen = true;
-    settings.resizable = false;
-    settings.width = screenWidth * numScreens;
-    settings.height = screenHeight;
-    settings.windowMode = OF_FULLSCREEN;
+   //settings.resizable = false;
+//    settings.width = screenWidth * numScreens;
+//   settings.height = screenHeight;
+    //settings.windowMode = OF_FULLSCREEN;
+
+//   settings.setPosition(glm::vec2(100, 100));
+
+
 
     auto window = ofCreateWindow(settings);
     auto app = std::make_shared<ofApp>();
