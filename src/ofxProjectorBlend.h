@@ -84,7 +84,7 @@ public:
 
     // variables that control the blend
     // more info here on what these variables do
-    // http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/
+    // http://paulbourke.net/texture_colour/edgeblend/
     vector<float> blendPower;
     vector<float> gamma;
     vector<float> luminance;

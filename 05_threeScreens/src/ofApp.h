@@ -26,7 +26,7 @@
 #define PROJECTOR_COUNT 3
 #define PROJECTOR_WIDTH 1920 
 #define PROJECTOR_HEIGHT 1200 
-#define PIXEL_OVERLAP 40
+#define PIXEL_OVERLAP 6 * 40
 
 
 class ofApp: public ofBaseApp
@@ -34,9 +34,15 @@ class ofApp: public ofBaseApp
 public:
     void setup() override;
     void draw() override;
-    
-    void keyReleased(int key) override;
+    void exit() override;
+
+    void keyPressed(int key) override;
+
+    void save();
+    void load();
 
     ofxProjectorBlend blender;
+
+    std::size_t currentBlend = 0;
 
 };
